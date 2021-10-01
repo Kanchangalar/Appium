@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.6 on win32)" generated="20210924 17:05:56.106" rpa="false" schemaversion="2">
+<suite id="s1" name="Tc 01" source="C:\Users\kanch\OneDrive\Desktop\Mobileapp\Tests\tc_01.robot">
+<test id="s1-t1" name="User should able to launch flipkart application">
+<kw name="Launch the flipkart application">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${flip_srver}</arg>
+<arg>platformName=${proj_name}</arg>
+<arg>platformVersion=${version_device}</arg>
+<arg>deviceName=${name_device}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210924 17:05:56.453" endtime="20210924 17:06:13.158"/>
+</kw>
+<status status="PASS" starttime="20210924 17:05:56.452" endtime="20210924 17:06:13.159"/>
+</kw>
+<kw name="Open Search bar and search for Mobiles">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${search_bar}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20210924 17:06:13.259" endtime="20210924 17:06:21.036"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${search_bar}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20210924 17:06:21.037" endtime="20210924 17:06:24.661"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${input_bar}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20210924 17:06:24.662" endtime="20210924 17:06:25.811"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${input_bar}</arg>
+<arg>${input_text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210924 17:06:25.816" level="INFO">Typing text 'Mobiles' into text field 'id=com.flipkart.android:id/search_autoCompleteTextView'</msg>
+<status status="PASS" starttime="20210924 17:06:25.812" endtime="20210924 17:06:27.073"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${click_text}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20210924 17:06:27.073" endtime="20210924 17:06:28.156"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${click_text}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20210924 17:06:28.157" endtime="20210924 17:06:28.269"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>461</arg>
+<arg>1840</arg>
+<arg>542</arg>
+<arg>813</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210924 17:06:28.269" endtime="20210924 17:06:29.918"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>380</arg>
+<arg>1954</arg>
+<arg>461</arg>
+<arg>752</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210924 17:06:29.918" endtime="20210924 17:06:32.168"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>578</arg>
+<arg>1533</arg>
+<arg>542</arg>
+<arg>526</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210924 17:06:32.169" endtime="20210924 17:06:34.396"/>
+</kw>
+<status status="PASS" starttime="20210924 17:06:13.250" endtime="20210924 17:06:34.397"/>
+</kw>
+<tag>01_tc</tag>
+<status status="PASS" starttime="20210924 17:05:56.451" endtime="20210924 17:06:34.400"/>
+</test>
+<status status="PASS" starttime="20210924 17:05:56.110" endtime="20210924 17:06:34.410"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">01_tc</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tc 01">Tc 01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
